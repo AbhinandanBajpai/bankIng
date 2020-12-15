@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+	<form th:action="@{/do_register}" method="post" th:object="${customer}">
+  <div class="form-row align-items-center">
+    <div class="col-sm-3 my-1">
+      <label  class="sr-only" for="inlineFormInputName">Name</label>
+      <input name="name" type="text" class="form-control" id="inlineFormInputName" placeholder="Jane Doe">
+    </div>
+    <div class="col-sm-3 my-1">
+      <label class="sr-only" for="inlineFormInputName">Phone</label>
+      <input name="phone" type="text" class="form-control" id="inlineFormInputName" placeholder="9899">
+    </div>
+    <div class="col-sm-3 my-1">
+      <label class="sr-only" for="inlineFormInputName">Address</label>
+      <input name="address" type="text" class="form-control" id="inlineFormInputName" placeholder="13/132">
+    </div>
+    <div class="col-sm-3 my-1">
+      <label class="sr-only" for="inlineFormInputName">Password</label>
+      <input name="password" type="password" class="form-control" id="inlineFormInputName" placeholder="pasword">
+    </div>
+    <div class="col-sm-3 my-1">
+      <label class="sr-only" for="inlineFormInputName">Amount</label>
+      <input name="amount" type="text" class="form-control" id="inlineFormInputName" placeholder="Enter Amount">
+    </div>
+    
+    <h1 th:if="${accountNumber}">your Account Number Is <span th:text="${accountNumber}"></span></h1>
+    
+    <div class="col-auto my-1">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+</form>
+</body>
+</html>
